@@ -7,21 +7,23 @@ document.addEventListener('DOMContentLoaded', async () => {
   const fileInput = document.createElement('input');
   fileInput.type = 'file';
   fileInput.accept = 'image/*';
-  const fileButton = document.querySelector('.icon-button');
-  fileButton.onclick = () => fileInput.click();  // ファイル選択をトリガー
+  const iconButton = document.querySelector('.icon-button');
+  iconButton.addEventListener('click', () => fileInput.click());
 
-  fileInput.addEventListener('change', function() {
+  fileInput.addEventListener('change', async function() {
     if (this.files.length > 0) {
-      uploadProfileImage(this.files[0]);
+      const file = this.files[0];
+      await uploadProfileImage(file);
+      setProfileImage(file);
     }
   });
-
+55
   form.addEventListener('submit', async (event) => {
-    event.preventDefault();  // フォームのデフォルト送信を阻止
+    event.preventDefault();
     const nickname = form.nickname.value;
     const oshi = form.oshi.value;
     const part = Array.from(form.part.selectedOptions).map(option => option.value);
-    uploadProfile(nickname, oshi, part, fileInput.files[0]);
+    await uploadProfile(nickname, oshi, part, fileInput.files[0]);
   });
 
   loadProfile();
@@ -36,15 +38,42 @@ async function uploadProfileImage(imageFile) {
   }
 }
 
+async function setProfileImage(file) {
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const iconButton = document.querySelector('.icon-button');
+    iconButton.style.backgroundImage = `url(${e.target.result})`;
+    iconButton.innerHTML = ''; // Remove the plus icon
+  };
+  reader.readAsDataURL(file);
+}
+
 async function uploadProfile(nickname, oshi, part, image) {
   try {
-    if (image) {
-      await uploadProfileImage(image);
-    }
     await setDoc(doc(db, "users", auth.currentUser.uid), {
       nickname,
       oshi,
       part
     }, { merge: true });
     console.log("Profile updated successfully");
- 
+  } catch (error) {
+    console.error("Failed to update profile", error);
+  }
+}
+
+async function loadProfile() {
+  const docSnap = await getDoc(doc(db, "users", auth.currentUser.uid));
+  if (docSnap.exists()) {
+    const data = docSnap.data();
+    document.querySelector('[name="nickname"]').value = data.nickname || '';
+    document.querySelector('[name="oshi"]').value = data.oshi || '';
+    document.querySelector('[name="part"]').value = data.part || [];
+    if (data.image) {
+      setProfileImage(data.image);
+    }
+  } else {
+    console.log("No profile data found");
+  }
+}
+
+
