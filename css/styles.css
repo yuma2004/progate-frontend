@@ -1,374 +1,371 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    padding-top: 60px; /* ヘッダーの高さ分のパディングを追加 */
-    padding-bottom: 60px; /* フッターの高さ分のパディングを追加 */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px; /* ヘッダーの高さ分のパディングを追加 */
+  padding-bottom: 60px; /* フッターの高さ分のパディングを追加 */
 }
 
 header {
-    position: fixed; /* ヘッダーを固定 */
-    top: 0; /* 上端に固定 */
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: 2px solid #ccc;
-    background-color: white; /* 背景色を白に設定 */
-    z-index: 1000; /* 他の要素より前面に表示 */
+  position: fixed; /* ヘッダーを固定 */
+  top: 0; /* 上端に固定 */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
+  background-color: white; /* 背景色を白に設定 */
+  z-index: 1000; /* 他の要素より前面に表示 */
 }
 
 .small-logo {
-    width: 90px; /* 画像の幅を200ピクセルに設定 */
-    height: auto; /* 高さは自動的に調整 */
+  width: 90px; /* 画像の幅を200ピクセルに設定 */
+  height: auto; /* 高さは自動的に調整 */
 }
 
 footer {
-    position: fixed; /* フッターを固定 */
-    bottom: 0; /* 下端に固定 */
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    background-color: white;
-    border-top: 2px solid #ccc;
-    z-index: 1000; /* 他の要素より前面に表示 */
+  position: fixed; /* フッターを固定 */
+  bottom: 0; /* 下端に固定 */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-top: 2px solid #ccc;
+  z-index: 1000; /* 他の要素より前面に表示 */
 }
 
 .footer-icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .footer-icon img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .footer-icon:hover {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 /* フッターはここまで */
 .menu-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    margin-top: 30px;
-  }
-  .mail {
-    width: 70%;
-    margin: 0 auto;
-  }
-  .pass {
-    width: 70%;
-    margin: 0 auto;
-  }
-  .login {
-    color: #ffffff;
-    display: block;
-    width: fit-content;
-    margin: 40px auto;
-    font-size: 20px;
-    border: 2px solid #5b5b5b;
-    background-color: #5b5b5b;
-    border-radius: 4%;
-    width: 100px;
-    height: 40px;
-  }
-  .center_container {
-    text-align: center;
-  }
-  .horazion {
-    display: inline-block;
-    width: 60%;
-    height: 10px;
-    border-bottom: 2px solid #888888;
-  }
-  
-  /* 親要素のスタイル */
-  .parent-container {
-    position: relative; /* ポジショニングコンテキストを提供 */
-    height: 100vh; /* 親要素が画面全体の高さを占めるように設定 */
-  }
-  
-  /* ボタンのスタイル */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin-top: 30px;
+}
+.mail {
+  width: 70%;
+  margin: 0 auto;
+}
+.pass {
+  width: 70%;
+  margin: 0 auto;
+}
+.login {
+  color: #ffffff;
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  font-size: 20px;
+  border: 2px solid #5b5b5b;
+  background-color: #5b5b5b;
+  border-radius: 4%;
+  width: 100px;
+  height: 40px;
+}
+.center_container {
+  text-align: center;
+}
+.horazion {
+  display: inline-block;
+  width: 60%;
+  height: 10px;
+  border-bottom: 2px solid #888888;
+}
+
+/* 親要素のスタイル */
+.parent-container {
+  position: relative; /* ポジショニングコンテキストを提供 */
+  height: 100vh; /* 親要素が画面全体の高さを占めるように設定 */
+}
+
+/* ボタンのスタイル */
+.sns-login-btn-google {
+  padding: 0.5em;
+  color: #898989 !important;
+  background: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 3px;
+  border: solid;
+  border-color: #898989;
+  border-width: 0.5px;
+  position: absolute; /* 絶対位置指定 */
+  top: 85%; /* 上端から50%の位置 */
+  left: 50%; /* 左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 自身のサイズに基づいて50%戻る */
+  display: inline-block;
+}
+
+.sns-login-btn-google:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("https://developers.google.com/identity/images/g-logo.png?hl=ja")
+    no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+@media screen and (min-width: 768px) {
   .sns-login-btn-google {
-    padding: 0.5em;
-    color: #898989 !important;
-    background: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 3px;
-    border: solid;
-    border-color: #898989;
-    border-width: 0.5px;
-    position: absolute; /* 絶対位置指定 */
-    top: 85%; /* 上端から50%の位置 */
-    left: 50%; /* 左端から50%の位置 */
-    transform: translate(-50%, -50%); /* 自身のサイズに基づいて50%戻る */
-    display: inline-block;
+    padding: 0.5em 0.6em;
+    font-size: 20px;
   }
-  
-  .sns-login-btn-google:before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url("https://developers.google.com/identity/images/g-logo.png?hl=ja") no-repeat;
-    background-size: contain;
-    vertical-align: middle;
-    margin-right: 24px;
-  }
-  
-  @media screen and (min-width: 768px){
-    .sns-login-btn-google {
-        padding: 0.5em 0.6em;
-        font-size: 20px;
-    }
-  }
-  
-  
-  
-  .mailadd,
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  .file-upload {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
+}
+
+.mailadd,
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
 
 .upload-icon {
-    font-size: 60px; /* アイコンのサイズ */
-    margin-top: 200px;
-    margin-bottom: 100px;
-
+  font-size: 60px; /* アイコンのサイズ */
+  margin-top: 200px;
+  margin-bottom: 100px;
 }
 
 p {
-    margin-bottom: 20px;
-    color: #333;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .upload-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007BFF; /* 青色 */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff; /* 青色 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .profile-view {
-    background-image: url("path_to_background_image.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #333;
-    padding: 20px;
-    overflow: hidden; /* はみ出た部分を非表示にする */
-  }
-  
-   .header-image img {
-    width: 100%;
-    height: auto;
-     overflow: hidden; 
-    width: 372px;  
-    height: 250px;   
-    margin-top: 22px;
-  }
-  .header-image {
-    max-width: 100%;   
-    max-height: 100%;  
-  }
-   
-  .profile-info {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-    /* border-radius: 50%;
+  background-image: url("path_to_background_image.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  padding: 20px;
+  overflow: hidden; /* はみ出た部分を非表示にする */
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  width: 372px;
+  height: 250px;
+  margin-top: 22px;
+}
+.header-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  /* border-radius: 50%;
       margin-right: 20px;  */
-    position: absolute; /* 絶対位置指定 */
-    top: -5%; /* 上端から50%の位置 */
-    left: 50%; /* 左端から50%の位置 */
-    transform: translate(-50%, -50%); /* 自身のサイズに基づいて50%戻る */
-    width: 140px;
-    height: 140px;
-  }
-  
-  .edit-icon {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #666;
-  }
-  
-  .info p {
-    margin-top: 60px;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .past-works h3 {
-    margin-top: 20px;
-  }
-  
-  .past-works {
-    margin-top: 20px;
-  }
-  .profile-settings {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  .icon-button {
-    font-size: 24px; /* アイコンサイズ */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    margin-bottom: 90px;
-    margin-top: 150px;
-  }
-  
-  .setting,
-  select {
-    width: 90%; /* 入力フィールドの幅 */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button[type="submit"] {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #e027d7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    width: fit-content;
-    margin: 40px auto;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #45a049; /* ホバー時の色変更 */
-  }
-  .media-list {
-    padding: 10px;
-    background-color: #f0f0f0; /* リストの背景色 */
-    height: 100px;
-  }
-  
-  .media-list ul {
-    list-style: none;
-    /* padding: 0; */
-    /* margin-top: px; */
-  }
-  
-  .media-item {
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-    padding-bottom: 5px; /* アイテム下に余白を追加 */
-    border-bottom: 1px solid #7a7a7a; /* 下線を追加 */
-  }
-  
-  .user-icon {
-    width: 50px; /* アイコンのサイズ */
-    height: 50px;
-    border-radius: 50%; /* 円形 */
-    margin-right: 10px;
-  }
-  
-  .part-name {
-    flex-grow: 1;
-    /* margin-right: 100px; */
-    margin-left: 20px;
-  }
-  
-  .play-button {
-    font-size: 30px;
-    margin-right: 40px;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  .title {
-    /* width: 70%;
+  position: absolute; /* 絶対位置指定 */
+  top: -5%; /* 上端から50%の位置 */
+  left: 50%; /* 左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 自身のサイズに基づいて50%戻る */
+  width: 140px;
+  height: 140px;
+}
+
+.edit-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #666;
+}
+
+.info p {
+  margin-top: 60px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.past-works h3 {
+  margin-top: 20px;
+}
+
+.past-works {
+  margin-top: 20px;
+}
+.profile-settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.icon-button {
+  font-size: 24px; /* アイコンサイズ */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-bottom: 90px;
+  margin-top: 150px;
+}
+
+.setting,
+select {
+  width: 90%; /* 入力フィールドの幅 */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e027d7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049; /* ホバー時の色変更 */
+}
+.media-list {
+  padding: 10px;
+  background-color: #f0f0f0; /* リストの背景色 */
+  height: 100px;
+}
+
+.media-list ul {
+  list-style: none;
+  /* padding: 0; */
+  /* margin-top: px; */
+}
+
+.media-item {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 5px; /* アイテム下に余白を追加 */
+  border-bottom: 1px solid #7a7a7a; /* 下線を追加 */
+}
+
+.user-icon {
+  width: 50px; /* アイコンのサイズ */
+  height: 50px;
+  border-radius: 50%; /* 円形 */
+  margin-right: 10px;
+}
+
+.part-name {
+  flex-grow: 1;
+  /* margin-right: 100px; */
+  margin-left: 20px;
+}
+
+.play-button {
+  font-size: 30px;
+  margin-right: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.title {
+  /* width: 70%;
     margin: 0 auto; */
-    display: flex;            
-      align-items: center;     
-      justify-content: space-between; 
-      background-color: #f0f0f0;
-  }
-  
-  input[type="title"] {
-    width: 80%;
-    padding: 10px;
-    margin: 30px 0;
-    margin-right: 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  } 
-  .samune{
-      background-color: #f0f0f0;
-  }
-   .samune.pic img {
-     width: 100%;
-    height: auto;
-    overflow: hidden;  
-    width: 372px;  
-    height: 250px;   
-    margin-top: 22px;
-  }
-  /* .samune.pic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+}
+
+input[type="title"] {
+  width: 80%;
+  padding: 10px;
+  margin: 30px 0;
+  margin-right: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.samune {
+  background-color: #f0f0f0;
+}
+.samune.pic img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  width: 372px;
+  height: 250px;
+  margin-top: 22px;
+}
+/* .samune.pic {
     max-width: 100%;   
     max-height: 100%;  
   }   */
-   .samune-pic{
-  
+.samune-pic {
   width: 300px;
   height: 300px;
-  max-width: 100%;   
+  max-width: 100%;
   max-height: 100%;
-  } 
-  
-  /* .container {
+}
+
+/* .container {
       display: flex;            
       align-items: center;     
       justify-content: space-between; 
@@ -380,10 +377,43 @@ p {
       max-width: 100%;
       max-height: 100%;
   }*/
-  
-  .play-button2 {
-      position: absolute; /* 絶対位置指定 */
-      top: 85%; /* 上端から50%の位置 */
-      left: 80%; /* 左端から50%の位置 */
-      font-size: 30px;
-  } 
+
+.play-button2 {
+  position: absolute; /* 絶対位置指定 */
+  top: 85%; /* 上端から50%の位置 */
+  left: 80%; /* 左端から50%の位置 */
+  font-size: 30px;
+}
+/* top.css */
+.video-gallery {
+  display: flex;
+  flex-direction: column; /* コンテナの項目を縦に並べる */
+  align-items: center; /* アイテムを中央に配置 */
+  padding: 20px;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.video-item {
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.video-item img {
+  width: 100%;
+  height: auto;
+}
+
+.video-item p {
+  text-align: center;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .video-item {
+    width: 90%;
+  }
+}
