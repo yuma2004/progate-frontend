@@ -1,19 +1,17 @@
-import { getProfileImageUrl } from "./initialize.mjs";  // 適切なパスに修正
+import { getProfileImageUrl } from "./path_to_your_script.mjs";  // パスは適宜修正
 
-// ユーザーのプロフィール画像URLを取得してフッターに表示する
-async function displayFooterIcon(uid) {
-    try {
-        const imageUrl = await getProfileImageUrl(uid);  // ユーザーIDを指定
-        const iconsContainer = document.getElementById('footer-icons');
-        const img = document.createElement('img');
-        img.src = imageUrl;
-        iconsContainer.appendChild(img);
-    } catch (error) {
-        console.error('Failed to load user icon:', error);
-    }
-}
-
-// ページ読み込み時に実行
-document.addEventListener('DOMContentLoaded', () => {
-    displayFooterIcon('user_uid_here');  // 実際のユーザーUIDを渡す
+document.addEventListener("DOMContentLoaded", function() {
+  updateProfileImage();
 });
+
+async function updateProfileImage() {
+  try {
+    const imageUrl = await getProfileImageUrl(); // 現在ログインしているユーザーのUIDを自動で使用
+    const imageElement = document.getElementById("footer-icons").querySelector("img");
+    imageElement.src = imageUrl;
+    imageElement.alt = "User Profile Image"; // 代替テキストも適宜設定してください
+  } catch (error) {
+    console.error("Failed to load user profile image:", error);
+    // エラー発生時の処理をここに記述できます
+  }
+}
