@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 100px; /* ヘッダーの高さ分のパディングを追加 */
+  padding-bottom: 60px; /* フッターの高さ分のパディングを追加 */
+}
+
+header {
+  position: fixed; /* ヘッダーを固定 */
+  top: 0; /* 上端に固定 */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
+  background-color: white; /* 背景色を白に設定 */
+  z-index: 1000; /* 他の要素より前面に表示 */
+}
+
+.small-logo {
+  width: 90px; /* 画像の幅を200ピクセルに設定 */
+  height: auto; /* 高さは自動的に調整 */
+}
+
+footer {
+  position: fixed; /* フッターを固定 */
+  bottom: 0; /* 下端に固定 */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-top: 2px solid #ccc;
+  z-index: 1000; /* 他の要素より前面に表示 */
+}
+
+.footer-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer-icon:hover {
+  background-color: #e0e0e0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+}
+
+/* .video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-around;
+  margin-top: 200px;  上部にスペースを追加 
+}
+
+.video-item {
+  width: 200px;  Adjust the width for responsiveness 
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} */
+.video-gallery {
+  display: flex;
+  flex-direction: column; /* コンテナの項目を縦に並べる */
+  align-items: center; /* アイテムを中央に配置 */
+  padding: 20px;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.video-item {
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.video-item img {
+  width: 100%;
+  height: auto;
+}
+
+.video-item p {
+  text-align: center;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .video-item {
+    width: 90%;
+  }
+}
