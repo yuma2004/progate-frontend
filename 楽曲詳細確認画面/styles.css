@@ -20,7 +20,10 @@ header {
     background-color: white; /* 背景色を白に設定 */
     z-index: 1000; /* 他の要素より前面に表示 */
 }
-
+.small-logo {
+    width: 90px; /* 画像の幅を200ピクセルに設定 */
+    height: auto; /* 高さは自動的に調整 */
+}
 footer {
     position: fixed; /* フッターを固定 */
     bottom: 0; /* 下端に固定 */
