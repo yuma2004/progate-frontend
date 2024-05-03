@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sample Website</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -25,13 +25,13 @@
       <div class="profile-settings">
         <button class="icon-button">+</button>
         <form action="submit_profile.html" method="post">
-          <input
+          <input class="setting"
             type="text"
             name="nickname"
             placeholder="ニックネーム"
             required
           />
-          <input type="text" name="oshi" placeholder="推し" required />
+          <input class="setting" type="text" name="oshi" placeholder="推し" required />
           <select name="part" multiple size="4" required>
             <option value="vocal">ボーカル</option>
             <option value="guitar">ギター</option>
