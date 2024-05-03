@@ -1,0 +1,91 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin-top: 30px;
+}
+.mail {
+  width: 70%;
+  margin: 0 auto;
+}
+.pass {
+  width: 70%;
+  margin: 0 auto;
+}
+.login {
+  color: #ffffff;
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  font-size: 20px;
+  border: 2px solid #5b5b5b;
+  background-color: #5b5b5b;
+  border-radius: 4%;
+  width: 100px;
+  height: 40px;
+}
+.center_container {
+  text-align: center;
+}
+.horazion {
+  display: inline-block;
+  width: 60%;
+  height: 10px;
+  border-bottom: 2px solid #888888;
+}
+
+/* 親要素のスタイル */
+.parent-container {
+  position: relative; /* ポジショニングコンテキストを提供 */
+  height: 100vh; /* 親要素が画面全体の高さを占めるように設定 */
+}
+
+/* ボタンのスタイル */
+.sns-login-btn-google {
+  padding: 0.5em;
+  color: #898989 !important;
+  background: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 3px;
+  border: solid;
+  border-color: #898989;
+  border-width: 0.5px;
+  position: absolute; /* 絶対位置指定 */
+  top: 85%; /* 上端から50%の位置 */
+  left: 50%; /* 左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 自身のサイズに基づいて50%戻る */
+  display: inline-block;
+}
+
+.sns-login-btn-google:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("https://developers.google.com/identity/images/g-logo.png?hl=ja") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+@media screen and (min-width: 768px){
+  .sns-login-btn-google {
+      padding: 0.5em 0.6em;
+      font-size: 20px;
+  }
+}
+
+
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
