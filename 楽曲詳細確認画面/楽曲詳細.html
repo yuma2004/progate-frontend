@@ -1,86 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Website</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <!-- ヘッダー -->
-    <header>
-      <div class="logo left-logo">
-        <img src="../img/ロゴ.png" alt="" class="small-logo" />
-      </div>
-      <div class="logo right-logo"><img src="../img/bell.png" alt="" /></div>
-    </header>
-    <!-- ヘッダー -->
 
-    <div class="media-list">
-      <ul>
-        <li class="media-item">
-          <img src="path_to_user_icon.jpg" alt="Art" class="user-icon" />
-          <span class="part-name">ボーカル</span>
-          <button class="play-button"><i class="fa fa-play"></i></button>
-        </li>
-        <!-- 他のリストアイテムも同様に追加 -->
-      </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Website</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <div class="logo left-logo">
+      <img src="../img/ロゴ.png" alt="" class="small-logo" />
     </div>
-    <div class="media-list">
-      <ul>
-        <li class="media-item">
-          <img src="path_to_user_icon.jpg" alt="Art" class="user-icon" />
-          <span class="part-name">ボーカル</span>
-          <button class="play-button"><i class="fa fa-play"></i></button>
-        </li>
-        <!-- 他のリストアイテムも同様に追加 -->
-      </ul>
+    <div class="logo right-logo"><img src="../img/bell.png" alt="" /></div>
+  </header>
+  <!-- ヘッダー -->
+
+  <div class="media-list">
+    <ul>
+      <li class="media-item">
+        <img src="path_to_user_icon.jpg" alt="Art" class="user-icon" />
+        <span class="part-name">ボーカル</span>
+        <button class="play-button"><i class="fa fa-play"></i></button>
+      </li>
+      <!-- 他のリストアイテムも同様に追加 -->
+    </ul>
+  </div>
+  <div class="media-list">
+    <ul>
+      <li class="media-item">
+        <img src="path_to_user_icon.jpg" alt="Art" class="user-icon" />
+        <span class="part-name">ボーカル</span>
+        <button class="play-button"><i class="fa fa-play"></i></button>
+      </li>
+      <!-- 他のリストアイテムも同様に追加 -->
+    </ul>
+  </div>
+  <div class="media-list">
+    <ul>
+      <li class="media-item">
+        <img src="path_to_user_icon.jpg" alt="Art" class="user-icon" />
+        <span class="part-name">ボーカル</span>
+        <button class="play-button"><i class="fa fa-play"></i></button>
+      </li>
+      <!-- 他のリストアイテムも同様に追加 -->
+    </ul>
+  </div>
+  <div class="media-list">
+    <ul>
+      <li class="media-item">
+        <img src="path_to_user_icon.jpg" alt="Art" class="user-icon" />
+        <span class="part-name">ボーカル</span>
+        <button class="play-button"><i class="fa fa-play"></i></button>
+      </li>
+      <!-- 他のリストアイテムも同様に追加 -->
+    </ul>
+  </div>
+  <form id="uploadForm">
+    <div class="title">
+        <input type="text" id="title_input" placeholder="タイトルを入力" required />
     </div>
-    <div class="media-list">
-      <ul>
-        <li class="media-item">
-          <img src="path_to_user_icon.jpg" alt="Art" class="user-icon" />
-          <span class="part-name">ボーカル</span>
-          <button class="play-button"><i class="fa fa-play"></i></button>
-        </li>
-        <!-- 他のリストアイテムも同様に追加 -->
-      </ul>
-    </div>
-    <div class="media-list">
-      <ul>
-        <li class="media-item">
-          <img src="path_to_user_icon.jpg" alt="Art" class="user-icon" />
-          <span class="part-name">ボーカル</span>
-          <button class="play-button"><i class="fa fa-play"></i></button>
-        </li>
-        <!-- 他のリストアイテムも同様に追加 -->
-      </ul>
-    </div>
-    <div class="title"><input type="title" placeholder="タイトル" /></div>
     <div class="samune">
-        <img src="../img/samune.jpg" alt="" class="samune-pic">
-        <button class="play-button2"><i class="fa fa-play"></i></button>
+        <input type="file" id="thumbnail_input" accept="image/*" style="display: none;">
+        <label for="thumbnail_input">
+            <img src="../img/samune.jpg" alt="" class="samune-pic" id="samune-image">
+        </label>
     </div>
-    <!-- <div class="container">
+    <button type="submit" class="play-button2"><i class="fa fa-play"></i> アップロード</button>
+</form>
+
+
+  <!-- <div class="container">
         <img src="../img/samune.jpg" alt="" class="samune-pic">
         <button class="play-button"><i class="fa fa-play"></i></button>
     </div> -->
-    <!-- フッター -->
-    <footer>
-      <div class="footer-icon" id="up-arrow">
-        <i class="fa fa-arrow-up"></i>
-      </div>
-      <div class="footer-icon" id="headphones">
-        <i class="fa fa-headphones"></i>
-      </div>
-      <div class="footer-icon" id="plus"><i class="fa fa-plus"></i></div>
-      <div class="footer-icon" id="art">
-        <img src="path_to_your_art_image.jpg" alt="Art" />
-      </div>
-    </footer>
-  </body>
+  <!-- フッター -->
+  <footer>
+    <div class="footer-icon" id="up-arrow">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+    <div class="footer-icon" id="headphones">
+      <i class="fa fa-headphones"></i>
+    </div>
+    <div class="footer-icon" id="plus"><i class="fa fa-plus"></i></div>
+    <div class="footer-icon" id="art">
+      <img src="path_to_your_art_image.jpg" alt="Art" />
+    </div>
+  </footer>
+  <script src="song-detail.js"></script>
+</body>
+
 </html>
