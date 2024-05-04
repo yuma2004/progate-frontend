@@ -2,8 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  padding-top: 60px; /* ヘッダーの高さ分のパディングを追加 */
-  padding-bottom: 60px; /* フッターの高さ分のパディングを追加 */
+  /* padding-top: 60px; 
+  padding-bottom: 60px;  */
 }
 
 header {
@@ -515,24 +515,24 @@ input[type="title"] {
 }
 
 .splash-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  /* ページ全体を覆う */
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  /* 白背景 */
-  z-index: 5;
-  /* ヘッダーより上に表示 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* ページ全体を覆う */
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    /* 白背景 */
+    z-index: 5;
+    /* ヘッダーより上に表示 */
 }
 
 #loading-text {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  font-family: "Koulen", sans-serif;
+  font-family: 'Koulen', sans-serif;
   color: #000;
   font-size: 40px;
   font-family: kaisei HarunoUmi;
@@ -540,79 +540,80 @@ input[type="title"] {
 }
 
 #loading-text span {
-  display: inline-block;
-  /* 他のスタイル設定があればここに追加 */
-  animation: wave-animation 2s infinite ease-in-out;
+    display: inline-block;
+    /* 他のスタイル設定があればここに追加 */
+    animation: wave-animation 2s infinite ease-in-out;
 }
 
 /* ウェーブアニメーションのキーフレーム */
 @keyframes wave-animation {
+
   0%,
   10%,
   20%,
   90%,
   100% {
-    transform: translateY(0px);
+      transform: translateY(0px);
   }
 
   30% {
-    transform: translateY(-20px);
+      transform: translateY(-20px);
   }
 
   40%,
   50%,
   60% {
-    transform: translateY(0px);
+      transform: translateY(0px);
   }
 
   70% {
-    transform: translateY(20px);
+      transform: translateY(20px);
   }
 
   80% {
-    transform: translateY(0px);
+      transform: translateY(0px);
   }
 }
 
 /* アニメーションの遅延を個別に設定 */
 #loading-text span:nth-child(1) {
-  animation-delay: 0s;
+    animation-delay: 0s;
 }
 
 #loading-text span:nth-child(2) {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 
 #loading-text span:nth-child(3) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 #loading-text span:nth-child(4) {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 #loading-text span:nth-child(5) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 #loading-text span:nth-child(6) {
-  animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 #loading-text span:nth-child(7) {
-  animation-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 
 #loading-text span:nth-child(8) {
-  animation-delay: 0.7s;
+    animation-delay: 0.7s;
 }
 
 #loading-text span:nth-child(9) {
-  animation-delay: 0.8s;
+    animation-delay: 0.8s;
 }
 
 #loading-text span:nth-child(10) {
-  animation-delay: 0.9s;
+    animation-delay: 0.9s;
 }
 
 /* 追加作成　アイコン挿入 */
