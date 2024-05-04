@@ -186,22 +186,32 @@ p {
 }
 
 .header-image img {
-  width: 100%;
-  height: auto;
+  /* width: 100%;
+  height: 250px; */
   overflow: hidden;
   width: 372px;
   height: 250px;
   margin-top: 22px;
 }
 .header-image {
-  max-width: 100%;
-  max-height: 100%;
+  /* max-width: 100%;
+  max-height: 100%; */
+  width: 100%;
+  height: 250px;
+  margin-top: 5%;
+}
+
+.icon-image {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .profile-info {
   display: flex;
   align-items: center;
   position: relative;
+  margin-top: 80px;
 }
 
 .profile-pic {
@@ -227,7 +237,12 @@ p {
 }
 
 .info p {
-  margin-top: 60px;
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
 }
 
 .label {
@@ -241,26 +256,103 @@ p {
 .past-works {
   margin-top: 20px;
 }
-.profile-settings {
+
+/* #upload-box {
+  width: 100%;
+  height: 230px;
+  border: 2px dashed #ccc;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 20px;
+  position: relative;
+  background-color: #f9f9f9;
+  margin-top: 40px;
 }
 
-.icon-button {
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 24px; /* アイコンサイズ */
-  width: 50px;
-  height: 50px;
+#icon-wrapper {
+  display: block;
+  /* width: 10px;
+  height: 10px; 
   border-radius: 50%;
-  border: none;
-  background-color: #f0f0f0;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
   cursor: pointer;
-  margin-bottom: 90px;
-  margin-top: 150px;
+  position: absolute;
+}
+
+#upload-icon {
+  width: 30px;
+  height: 30px;
+}
+
+#upload-box label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+} */
+
+/* #rectangle {
+  width: 100%; 
+  height: 250px; 
+  background-color: #f9f9f9; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; /
+  border: 2px solid #ccc; 
+  position: relative; 
+  margin-top: 40px;
+  align-items: center;
+}
+
+#circle {
+  width: 100px; 
+  height: 100px; 
+  background-color: #ddd; 
+  border-radius: 50%; 
+  align-self: center;
+} */
+
+#rectangle {
+  width: 100%; /* 長方形の幅 */
+  height: 250px; /* 長方形の高さ */
+  background-color: #f9f9f9; /* 長方形の背景色 */
+  display: flex;
+  justify-content: center; /* 中央に要素を配置 */
+  align-items: center; /* 中央に要素を配置 */
+  border: 2px solid #ccc; /* 長方形の枠線 */
+  position: relative; /* 子要素の位置指定の基準点 */
+  margin-top: 40px;
+}
+
+#circle {
+  width: 100px; /* 円の幅 */
+  height: 100px; /* 円の高さ */
+  background-color: #ddd; /* 円の背景色 */
+  border-radius: 50%; /* 円形にする */
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 中央に要素を配置 */
+  align-items: center; /* 中央に要素を配置 */
+  position: relative; /* プラス記号の位置指定の基準点 */
+}
+
+#circle::before {
+  content: "+"; /* プラス記号 */
+  font-size: 24px; /* プラス記号のサイズ */
+  color: black; /* プラス記号の色 */
 }
 
 .setting,
@@ -270,6 +362,7 @@ select {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-top: 40px;
 }
 
 button[type="submit"] {
@@ -421,7 +514,6 @@ input[type="title"] {
   }
 }
 
-
 .splash-container {
   display: flex;
   justify-content: center;
@@ -440,7 +532,7 @@ input[type="title"] {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  font-family: 'Koulen', sans-serif;
+  font-family: "Koulen", sans-serif;
   color: #000;
   font-size: 40px;
   font-family: kaisei HarunoUmi;
@@ -455,31 +547,30 @@ input[type="title"] {
 
 /* ウェーブアニメーションのキーフレーム */
 @keyframes wave-animation {
-
   0%,
   10%,
   20%,
   90%,
   100% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 
   30% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 
   40%,
   50%,
   60% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 
   70% {
-      transform: translateY(20px);
+    transform: translateY(20px);
   }
 
   80% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
@@ -522,4 +613,27 @@ input[type="title"] {
 
 #loading-text span:nth-child(10) {
   animation-delay: 0.9s;
+}
+
+/* 追加作成　アイコン挿入 */
+/* .file__label {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  width: min(100%, 350px);
+  padding: 1.5em 0.5em;
+  margin-inline: auto;
+  color: #fff;
+  background-color: #ffa620;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.file__label:hover {
+  opacity: 0.7;
+} */
+
+input[type="file"] {
+  display: none;
 }

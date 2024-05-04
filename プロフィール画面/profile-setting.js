@@ -7,7 +7,8 @@ function setup() {
             try {
                 const profileData = await getProfile(user.uid);
                 const profileUrl = await getProfileImageUrl(user.uid);
-                
+
+                document.getElementById('header-image').src = profileUrl;
                 document.getElementById('profile-image').src = profileUrl;
                 document.getElementById('nickname-value').textContent = profileData.name;
                 document.getElementById('favorite-value').textContent = profileData.favorite;

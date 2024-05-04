@@ -11,3 +11,14 @@ export async function getMusic(limit = 10, startAfter) {
   }
   return result;
 }
+
+# html,css細かい変更点.
+
+全体
+ヘッダー、フッダーの割合を合わせる。ボタンはある程度大きいほうが押しやすい
+
+プロフィール設定画面
+担当パート選択複数可能にする
+
+top画面
+サムネ、タイトルを取得してくるからhtmlを変更する

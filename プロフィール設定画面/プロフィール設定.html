@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -9,41 +9,69 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Firebase and other JavaScript resources -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script type="module" src="./initialize.mjs"></script>
+    <script type="module" src="./auth.mjs"></script> -->
   </head>
   <body>
-      
     <header>
       <div class="logo left-logo">
         <img src="../img/ロゴ.png" alt="" class="small-logo" />
       </div>
       <div class="logo right-logo"><img src="../img/bell.png" alt="" /></div>
     </header>
-     
 
-     
     <main>
-      <div class="profile-settings">
-        <button class="icon-button">+</button>
-        <form action="submit_profile.html" method="post">
-          <input class="setting"
-            type="text"
-            name="nickname"
-            placeholder="ニックネーム"
-            required
-          />
-          <input class="setting" type="text" name="oshi" placeholder="推し" required />
-          <select name="part" multiple size="4" required>
-            <option value="vocal">ボーカル</option>
-            <option value="guitar">ギター</option>
-            <option value="bass">ベース</option>
-            <option value="drum">ドラム</option>
-          </select>
-          <button type="submit">音楽の世界へようこそ！</button>
-        </form>
+      <!-- ファイル選択関連 -->
+      <!-- <div id="upload-box">
+        <input type="file" id="header-input" hidden />
+        <label for="header-input" id="header-area">
+          ヘッダーファイルを選択
+          <input type="file" id="file-input" hidden />
+          <label for="file-input" id="icon-wrapper">
+            <img src="upload-icon.png" alt="Upload Icon" id="upload-icon" />
+          </label>
+        </label>
+      </div> -->
+      <div id="rectangle">
+        <div id="circle"></div>
       </div>
+
+      <!-- <form  method="post"> -->
+      <!-- 変更: inputのnameをidに合わせて変更 -->
+      <input
+        class="setting"
+        type="text"
+        id="name"
+        placeholder="ニックネーム"
+        required
+      />
+      <input
+        class="setting"
+        type="text"
+        id="favorite"
+        placeholder="推し"
+        required
+      />
+      <!-- 変更: selectのnameをidに合わせて変更、複数選択不可に変更 -->
+      <select id="part_selector" required>
+        <option value="vocal">ボーカル</option>
+        <option value="guitar">ギター</option>
+        <option value="bass">ベース</option>
+        <option value="drum">ドラム</option>
+      </select>
+      <button id="update" type="submit">音楽の世界へようこそ！</button>
+      <!-- </form> -->
+
+      <!-- 画像選択と表示 -->
+      <!-- <input style="display: block;" type="file" id="image_selector1" accept="image/*">
+        <figure id="figure" style="display: none;">
+            <img id="figure_image" src="" alt="Profile Image">
+        </figure> -->
     </main>
 
-  
     <footer>
       <div class="footer-icon" id="up-arrow">
         <i class="fa fa-arrow-up"></i>
@@ -57,74 +85,7 @@
       </div>
     </footer>
 
-     
-  </body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Website</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- Firebase and other JavaScript resources -->
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
-    <script type="module" src="./initialize.mjs"></script>
-    <script type="module" src="./auth.mjs"></script>
-</head>
-<body>
-    <header>
-        <div class="logo left-logo">
-            <img src="../img/ロゴ.png" alt="" class="small-logo" />
-        </div>
-        <div class="logo right-logo"><img src="../img/bell.png" alt="" /></div>
-    </header>
-
-    <main>
-        <div class="profile-settings">
-            <input type="file" class="icon-button" id="icon-button">
-            <form action="submit_profile.html" method="post">
-                <!-- 変更: inputのnameをidに合わせて変更 -->
-                <input class="setting" type="text" id="name" placeholder="ニックネーム" required />
-                <input class="setting" type="text" id="favorite" placeholder="推し" required />
-                <!-- 変更: selectのnameをidに合わせて変更、複数選択不可に変更 -->
-                <select id="part_selector" required>
-                    <option value="vocal">ボーカル</option>
-                    <option value="guitar">ギター</option>
-                    <option value="bass">ベース</option>
-                    <option value="drum">ドラム</option>
-                </select>
-                <button id="update" type="submit">音楽の世界へようこそ！</button>
-            </form>
-        </div>
-        <!-- 画像選択と表示 -->
-        <!-- <input style="display: block;" type="file" id="image_selector1" accept="image/*">
-        <figure id="figure" style="display: none;">
-            <img id="figure_image" src="" alt="Profile Image">
-        </figure> -->
-    </main>
-
-    <footer>
-        <div class="footer-icon" id="up-arrow">
-            <i class="fa fa-arrow-up"></i>
-        </div>
-        <div class="footer-icon" id="headphones">
-            <i class="fa fa-headphones"></i>
-        </div>
-        <div class="footer-icon" id="plus"><i class="fa fa-plus"></i></div>
-        <div class="footer-icon" id="art">
-            <img src="path_to_your_art_image.jpg" alt="Art" />
-        </div>
-    </footer>
-
     <!-- スクリプトの追加 -->
     <script type="module" src="プロフィール.js"></script>
-</body>
+  </body>
 </html>
-
-
-
