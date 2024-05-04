@@ -55,11 +55,6 @@ async function setup() {
     uploadProfile(name.value, favorite.value, part.value, image);
   });
 
-  //アイコン変更ボタンを押したとき
-  document.querySelector('.icon-button').addEventListener('click', () => {
-    document.getElementById('image_selector1').click();  // image_selector をクリック
-  });
-
   //制作に携わった楽曲を取得
   try {
     const involvedMusic = await getInvolvedMusic();

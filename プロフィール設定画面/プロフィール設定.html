@@ -86,7 +86,7 @@
 
     <main>
         <div class="profile-settings">
-            <button class="icon-button">+</button>
+            <input type="file" class="icon-button" id="icon-button">
             <form action="submit_profile.html" method="post">
                 <!-- 変更: inputのnameをidに合わせて変更 -->
                 <input class="setting" type="text" id="name" placeholder="ニックネーム" required />
@@ -102,10 +102,10 @@
             </form>
         </div>
         <!-- 画像選択と表示 -->
-        <input style="display: none;" type="file" id="image_selector" accept="image/*">
+        <!-- <input style="display: block;" type="file" id="image_selector1" accept="image/*">
         <figure id="figure" style="display: none;">
             <img id="figure_image" src="" alt="Profile Image">
-        </figure>
+        </figure> -->
     </main>
 
     <footer>
