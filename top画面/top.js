@@ -1,5 +1,5 @@
-import { getProfileImageUrl } from "./profile.mjs";
-import { auth } from "./initialize.mjs";
+import { getProfileImageUrl } from "../Mock/profile.mjs";
+import { auth } from "../Mock/initialize.mjs";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const imgElement = document.getElementById("art").querySelector("img"); // フッターのimg要素を取得
@@ -10,3 +10,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Failed to load user profile image:", error);
   }
 });
+

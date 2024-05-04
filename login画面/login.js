@@ -5,8 +5,8 @@ import {
   signInWithRedirect,
   signInWithPopup,
 } from "firebase/auth";
-import { onAuthStateChanged } from "./auth.mjs";
-import { auth } from "./initialize.mjs";
+import { onAuthStateChanged } from "../Mock/auth.mjs";
+import { auth } from "../Mock/initialize.mjs";
 
 //Google認証プロバイダの設定:
 const provider = new GoogleAuthProvider();
