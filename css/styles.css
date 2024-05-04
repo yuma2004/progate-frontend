@@ -436,12 +436,12 @@ button[type="submit"]:hover {
 }
 /* .Transition-to-upload {
 
-    border-radius: 50%;  /* これにより画像が円形に見える */
-    width: 100px;        /* 画像の幅を設定 */
-    height: 100px;       /* 画像の高さを設定 */
+    border-radius: 50%;  /* これにより画像が円形に見える 
+    width: 100px;        /* 画像の幅を設定 
+    height: 100px;       /* 画像の高さを設定 
     object-fit: cover;   画像のアスペクト比を保持しつつフィットさせる
   
-} */
+}*/
 /* .title {
   /* width: 70%;
     margin: 0 auto; 
@@ -669,3 +669,4 @@ input[type="title"] {
 input[type="file"] {
   display: none;
 }
+
