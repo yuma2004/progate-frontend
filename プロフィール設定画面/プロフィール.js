@@ -75,4 +75,24 @@ async function setup() {
   }
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  onAuthStateChanged(user => {
+    if (user) {
+      updateFooterImage(user.uid);
+    }
+  });
+});
+
+async function updateFooterImage(uid) {
+  try {
+    const imageUrl = await getProfileImageUrl(uid);
+    const footerImage = document.getElementById('footer-icon-img');
+    if (footerImage && imageUrl) {
+      footerImage.src = imageUrl;
+    }
+  } catch (error) {
+    console.error('Failed to update footer image:', error);
+  }
+}
+
 onAuthStateChanged(setup, redirectHandler);
