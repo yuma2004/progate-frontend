@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sample Website</title>
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Website</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <!-- ヘッダー -->
     <header>
-        <div class="logo left-logo"><img src="../img/ロゴ.png" alt="" class="small-logo"></div>
-        <div class="logo right-logo"><img src="../img/bell.png" alt=""></div>
+      <div class="logo left-logo">
+        <img src="../img/ロゴ.png" alt="" class="small-logo" />
+      </div>
+      <div class="logo right-logo"><img src="../img/bell.png" alt="" /></div>
     </header>
     <!-- ヘッダー -->
 
-     <!-- メインコンテンツ -->
-     <div class="file-upload" id="upload_div">
-        <div class="upload-icon">
-            <i class="fa fa-upload"></i>
-        </div>
-        <p>アップロードするファイルを選択してください。</p>
-        <input type="file" id="fileInput" style="display: none;" />
-        <label for="fileInput" class="upload-button">ファイルを選択</label>
+    <!-- メインコンテンツ -->
+    <div class="file-upload" id="upload_div">
+      <div class="upload-icon">
+        <i class="fa fa-upload"></i>
+      </div>
+      <p>アップロードするファイルを選択してください。</p>
+      <input type="file" id="fileInput" style="display: none" />
+      <label for="fileInput" class="upload-button">ファイルを選択</label>
     </div>
-    
-     <!-- 追加 -->
-     <div id="error"></div>
+
+    <!-- 追加 -->
+    <div id="error"></div>
 
     <!-- フッター -->
     <footer>
-        <div class="footer-icon" id="up-arrow"><i class="fa fa-arrow-up"></i></div>
+     
+
+      <!-- <div>
+            <a href="../top画面/top.html">
+              <img src="../img/home.png" alt="top" />
+            </a>
+          </div>
+          <div>
+            <a href="../楽曲詳細確認画面/楽曲詳細.html">
+              <img src="../img/headphones.png" alt="detail" />
+            </a>
+          </div>
+          <div>
+            <a href="../プロフィール画面/プロフィール画面.html">
+              <img src="profile-image" alt="profile" />
+            </a>
+          </div> -->
+
+      <!-- <div class="footer-icon" id="up-arrow"><i class="fa fa-arrow-up"></i></div>
         <div class="footer-icon" id="headphones"><i class="fa fa-headphones"></i></div>
         <div class="footer-icon" id="plus"><i class="fa fa-plus"></i></div>
-        <div class="footer-icon" id="art"><img src="path_to_your_art_image.jpg" alt="Art"></div>
+        <div class="footer-icon" id="art"><img src="path_to_your_art_image.jpg" alt="Art"></div> -->
     </footer>
     <!-- フッター -->
     <script src="upload.js"></script>
-</body>
+  </body>
 </html>

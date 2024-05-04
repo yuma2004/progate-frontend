@@ -7,12 +7,15 @@
     <!-- reset.css ress -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
     <!-- ヘッダー -->
-    <header>
+    <header id="header">
       <div class="logo left-logo">
         <img src="../img/ロゴ.png" alt="" class="small-logo" />
       </div>
@@ -57,17 +60,32 @@
       </div>
     </footer> -->
 
-    <footer>
-      <button id="toppage" class="footer-icon" id="up-arrow">
-        <i class="fa fa-arrow-up"></i>
+    <footer id="footer">
+      <button onclick="location.href='top.html'">
+        <img src="../img/home.png" alt="top" />
       </button>
-      <button id="Music-Detail-Page" class="footer-icon" id="headphones">
-        <i class="fa fa-headphones"></i>
+      <!-- <a href="top.html">
+        <img src="../img/home.png" alt="top" />
+      </a> -->
+
+      <button onclick="location.href='../楽曲詳細確認画面/楽曲詳細.html'">
+        <img src="../img/headphones.png" alt="detail" />
       </button>
-      <button id="upload" class="footer-icon" id="plus"><i class="fa fa-plus"></i></button>
-      <button id="mypage" class="footer-icon" id="art">
-        <img src="path_to_your_art_image.jpg" alt="Art" />
+
+      <!-- <div>
+        <a href="../楽曲詳細確認画面/楽曲詳細.html">
+          <img src="../img/headphones.png" alt="detail" />
+        </a>
+      </div> -->
+
+      <button onclick="location.href='../プロフィール画面/プロフィール画面.html'">
+        <img src="profile-image" alt="profile" />
       </button>
+      <!-- <div>
+        <a href="../プロフィール画面/プロフィール画面.html">
+          <img src="profile-image" alt="profile" />
+        </a>
+      </div> -->
     </footer>
     <script type="module" src="top.js"></script>
 
