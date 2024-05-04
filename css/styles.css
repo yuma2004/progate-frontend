@@ -381,10 +381,14 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #45a049; /* ホバー時の色変更 */
 }
+
+.media-list-top {
+  margin-top: 25%;
+}
 .media-list {
   padding: 10px;
-  background-color: #f0f0f0; /* リストの背景色 */
-  height: 100px;
+  background-color: #ffffff; /* リストの背景色 */
+  height: 90px;
 }
 
 .media-list ul {
@@ -398,7 +402,7 @@ button[type="submit"]:hover {
   align-items: center;
   margin-top: 50px;
   padding-bottom: 5px; /* アイテム下に余白を追加 */
-  border-bottom: 1px solid #7a7a7a; /* 下線を追加 */
+  /* border-bottom: 1px solid #7a7a7a; 下線を追加 */
 }
 
 .user-icon {
@@ -411,23 +415,42 @@ button[type="submit"]:hover {
 .part-name {
   flex-grow: 1;
   /* margin-right: 100px; */
-  margin-left: 20px;
+  text-align: center;
+  margin-right: 25px;
 }
 
 .play-button {
   font-size: 30px;
-  margin-right: 40px;
+  margin-right: 25px;
   border: none;
   background: none;
   cursor: pointer;
 }
-.title {
+.hoge{
+  text-align: center;
+  border-radius: 50%;  /* これにより画像が円形に見える */
+    width: 100px;        /* 画像の幅を設定 */
+    height: 100px;       /* 画像の高さを設定 */
+    object-fit: cover;   /* 画像のアスペクト比を保持しつつフィットさせる */
+
+}
+/* .Transition-to-upload {
+
+    border-radius: 50%;  /* これにより画像が円形に見える */
+    width: 100px;        /* 画像の幅を設定 */
+    height: 100px;       /* 画像の高さを設定 */
+    object-fit: cover;   画像のアスペクト比を保持しつつフィットさせる
+  
+} */
+/* .title {
   /* width: 70%;
-    margin: 0 auto; */
+    margin: 0 auto; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
+  margin-top: 50px;
+  justify-content: center;  水平方向に中央揃え 
 }
 
 input[type="title"] {
@@ -440,39 +463,48 @@ input[type="title"] {
   box-sizing: border-box;
 }
 .samune {
-  background-color: #f0f0f0;
+  /* background-color: #ffffff;
+  margin-bottom: 100px; 
+
+  display: flex; /* フレックスコンテナを設定 
+  align-items: center; /* 中央揃え 
+  background-color: #ffffff;
+  margin-bottom: 100px;
+  position: relative; /* ボタンの絶対位置の基準点 
 }
+
+.thumbnail-container {
+  width: 100%;
+  height: 200px;
+}
+.samune-pic {
+  width: 100%;
+  height: 200px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 20px;
+}
+
+.play-button-samune {
+  position: absolute;
+  right: 20px;
+  top: 65%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* 必要に応じて追加のスタイリング 
+
 .samune.pic img {
   width: 100%;
   height: auto;
   overflow: hidden;
   width: 372px;
   height: 250px;
-  margin-top: 22px;
-}
-/* .samune.pic {
-    max-width: 100%;   
-    max-height: 100%;  
-  }   */
-.samune-pic {
-  width: 300px;
-  height: 300px;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* .container {
-      display: flex;            
-      align-items: center;     
-      justify-content: space-between; 
-  }
-  
-  .samune-pic {
-      width: 300px;
-      height: 300px;
-      max-width: 100%;
-      max-height: 100%;
-  }*/
+  margin-top: 0px;
+} */
 
 .play-button2 {
   position: absolute; /* 絶対位置指定 */
@@ -515,24 +547,24 @@ input[type="title"] {
 }
 
 .splash-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    /* ページ全体を覆う */
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    /* 白背景 */
-    z-index: 5;
-    /* ヘッダーより上に表示 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* ページ全体を覆う */
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* 白背景 */
+  z-index: 5;
+  /* ヘッダーより上に表示 */
 }
 
 #loading-text {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  font-family: 'Koulen', sans-serif;
+  font-family: "Koulen", sans-serif;
   color: #000;
   font-size: 40px;
   font-family: kaisei HarunoUmi;
@@ -540,80 +572,79 @@ input[type="title"] {
 }
 
 #loading-text span {
-    display: inline-block;
-    /* 他のスタイル設定があればここに追加 */
-    animation: wave-animation 2s infinite ease-in-out;
+  display: inline-block;
+  /* 他のスタイル設定があればここに追加 */
+  animation: wave-animation 2s infinite ease-in-out;
 }
 
 /* ウェーブアニメーションのキーフレーム */
 @keyframes wave-animation {
-
   0%,
   10%,
   20%,
   90%,
   100% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 
   30% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 
   40%,
   50%,
   60% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 
   70% {
-      transform: translateY(20px);
+    transform: translateY(20px);
   }
 
   80% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
 /* アニメーションの遅延を個別に設定 */
 #loading-text span:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 #loading-text span:nth-child(2) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 #loading-text span:nth-child(3) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 #loading-text span:nth-child(4) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 #loading-text span:nth-child(5) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 #loading-text span:nth-child(6) {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 #loading-text span:nth-child(7) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 #loading-text span:nth-child(8) {
-    animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 #loading-text span:nth-child(9) {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 #loading-text span:nth-child(10) {
-    animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 
 /* 追加作成　アイコン挿入 */
