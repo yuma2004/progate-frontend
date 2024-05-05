@@ -29,15 +29,66 @@
       <input type="file" id="fileInput" style="display: none" />
       <label for="fileInput" class="upload-button">ファイルを選択</label>
     </div>
+     <form id="uploadForm">
+      <div class="title">
+        <input
+          type="text"
+          id="title_input"
+          placeholder="タイトルを入力"
+          required
+        />
+      </div>
+      <div class="samune-change"> 下にサムネイルを追加↓</div>
+
+      <div class="samune">
+        <div class="thumbnail-container">
+            <input type="file" id="thumbnail_input" accept="image/*" style="display: none" />
+            <label for="thumbnail_input">
+                <img src="../img/Rectangle 7.png" alt="サムネイル画像" class="samune-pic" id="samune-image">
+            </label>
+        </div>
+        <!-- <button class="play-button-samune" for="fileinput"><img src="../img/+.png" alt="再生ボタン"></button> -->
+    </div>
+   
+
+
+   
 
     <!-- 追加 -->
     <div id="error"></div>
 
     <!-- フッター -->
-    <footer>
-     
+
+    <footer id="footer">
+        <button onclick="location.href='../top画面/top.html'">
+            <img src="../img/home.png" alt="top" />
+        </button>
+        <button onclick="location.href='../楽曲詳細確認画面/楽曲詳細.html'">
+            <img src="../img/headphones.png" alt="detail" />
+        </button>
+        <button onclick="location.href='../プロフィール画面/プロフィール画面.html'">
+            <img src="profile-image" alt="profile" />
+        </button>
+
+
+      <!-- <a href="top.html">
+        <img src="../img/home.png" alt="top" />
+      </a> -->
 
       <!-- <div>
+        <a href="../楽曲詳細確認画面/楽曲詳細.html">
+          <img src="../img/headphones.png" alt="detail" />
+        </a>
+      </div> -->
+
+      <!-- <div>
+        <a href="../プロフィール画面/プロフィール画面.html">
+          <img src="profile-image" alt="profile" />
+        </a>
+      </div> -->
+    </footer>
+
+    <!-- <div>
             <a href="../top画面/top.html">
               <img src="../img/home.png" alt="top" />
             </a>
@@ -53,11 +104,11 @@
             </a>
           </div> -->
 
-      <!-- <div class="footer-icon" id="up-arrow"><i class="fa fa-arrow-up"></i></div>
+    <!-- <div class="footer-icon" id="up-arrow"><i class="fa fa-arrow-up"></i></div>
         <div class="footer-icon" id="headphones"><i class="fa fa-headphones"></i></div>
         <div class="footer-icon" id="plus"><i class="fa fa-plus"></i></div>
         <div class="footer-icon" id="art"><img src="path_to_your_art_image.jpg" alt="Art"></div> -->
-    </footer>
+    <!-- </footer> -->
     <!-- フッター -->
     <script src="upload.js"></script>
   </body>

@@ -50,6 +50,13 @@ footer {
   border-radius: 50%;
   cursor: pointer;
 }
+footer button {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
 
 .footer-icon img {
   max-width: 100%;
@@ -443,17 +450,20 @@ button[type="submit"]:hover {
   object-fit: cover; /* 画像のアスペクト比を保持しつつフィットさせる */
 
 }
-/* .title {
-  /* width: 70%;
+ .title {
+   width: 70%;
     margin: 0 auto; 
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
   margin-top: 50px;
-  justify-content: center;  水平方向に中央揃え 
+   justify-content: center;  /*水平方向に中央揃え  */
 }
-
+.samune-change{
+  text-align: center;
+  margin-top: 10px;
+}
 input[type="title"] {
   width: 80%;
   padding: 10px;
@@ -464,14 +474,14 @@ input[type="title"] {
   box-sizing: border-box;
 }
 .samune {
-  /* background-color: #ffffff;
+   background-color: #ffffff;
   margin-bottom: 100px; 
 
-  display: flex; /* フレックスコンテナを設定 
-  align-items: center; /* 中央揃え 
+  display: flex; /* フレックスコンテナを設定 */
+  align-items: center; /* 中央揃え */
   background-color: #ffffff;
   margin-bottom: 100px;
-  position: relative; /* ボタンの絶対位置の基準点 
+  position: relative; /* ボタンの絶対位置の基準点 */
 }
 
 .thumbnail-container {
@@ -496,16 +506,16 @@ input[type="title"] {
   cursor: pointer;
 }
 
-/* 必要に応じて追加のスタイリング 
+/* 必要に応じて追加のスタイリング */
 
-.samune.pic img {
+/* .samune.pic img {
   width: 100%;
   height: auto;
   overflow: hidden;
   width: 372px;
   height: 250px;
   margin-top: 0px;
-} */
+}  */
 
 .play-button2 {
   position: absolute; /* 絶対位置指定 */
