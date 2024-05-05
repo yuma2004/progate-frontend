@@ -57,7 +57,6 @@ footer button {
   outline: none;
 }
 
-
 .footer-icon img {
   max-width: 100%;
   max-height: 100%;
@@ -166,8 +165,8 @@ input[type="password"] {
 
 .upload-icon {
   font-size: 60px; /* アイコンのサイズ */
-  margin-top: 200px;
-  margin-bottom: 100px;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 p {
@@ -336,19 +335,23 @@ p {
 }
 
 #circle {
-  width: 100px; /* 円の幅 */
-  height: 100px; /* 円の高さ */
+  /* margin: auto; */
+  width: 20vw; /* 円の幅 */
+  height: 20vw; /* 円の高さ */
   background-color: #ddd; /* 円の背景色 */
   border-radius: 50%; /* 円形にする */
   display: flex; /* フレックスボックスを使用 */
   justify-content: center; /* 中央に要素を配置 */
   align-items: center; /* 中央に要素を配置 */
-  position: relative; /* プラス記号の位置指定の基準点 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 
 #circle::before {
   content: "+"; /* プラス記号 */
-  font-size: 24px; /* プラス記号のサイズ */
+  font-size: 30px; /* プラス記号のサイズ */
   color: black; /* プラス記号の色 */
 }
 
@@ -425,42 +428,38 @@ button[type="submit"]:hover {
 }
 .hoge {
   display: flex;
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center; /* 垂直方向の中央揃え */
-    height: 300px; /* もしページ全体の高さに対して中央にしたい場合 */
-    
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
+  height: 300px; /* もしページ全体の高さに対して中央にしたい場合 */
 }
-  
 
- .Transition-to-upload {
+.Transition-to-upload {
   background: none; /* 背景を透明に */
   border: none; /* 枠線を削除 */
   padding: 0; /* パディングを0に */
   cursor: pointer; /* ホバー時にカーソルをポインターに */
   border-radius: 50%;
-    border: 2px solid rgb(78, 78, 78); /* 円の境界線 */
-    background-color: white; /* 背景色は任意で調整可能 */
-  
+  border: 2px solid rgb(78, 78, 78); /* 円の境界線 */
+  background-color: white; /* 背景色は任意で調整可能 */
 }
-.Transition-to-upload-image{
+.Transition-to-upload-image {
   text-align: center;
   border-radius: 50%; /* これにより画像が円形に見える */
   width: 100px; /* 画像の幅を設定 */
   height: 100px; /* 画像の高さを設定 */
   object-fit: cover; /* 画像のアスペクト比を保持しつつフィットさせる */
-
 }
- .title {
-   width: 70%;
-    margin: 0 auto; 
+.title {
+  width: 70%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
-  margin-top: 50px;
-   justify-content: center;  /*水平方向に中央揃え  */
+  margin-top: 40px;
+  justify-content: center; /*水平方向に中央揃え  */
 }
-.samune-change{
+.samune-change {
   text-align: center;
   margin-top: 10px;
 }
@@ -474,13 +473,13 @@ input[type="title"] {
   box-sizing: border-box;
 }
 .samune {
-   background-color: #ffffff;
-  margin-bottom: 100px; 
+  background-color: #ffffff;
+  margin-bottom: 50px;
 
   display: flex; /* フレックスコンテナを設定 */
   align-items: center; /* 中央揃え */
   background-color: #ffffff;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   position: relative; /* ボタンの絶対位置の基準点 */
 }
 
@@ -493,7 +492,7 @@ input[type="title"] {
   height: 200px;
   max-width: 100%;
   max-height: 100%;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .play-button-samune {
@@ -737,3 +736,17 @@ input[type="file"] {
   color: #333;
   width: 100%;
 }
+.profile-input {
+  margin: 0px 40px;
+}
+
+#note-part {
+  margin: 30px 0px;
+  text-align: center;
+}
+/* ボタンが無効化されているときのスタイル */
+#upload button:disabled {
+  background-color: #ccc; /* 灰色 */
+  color: #666; /* 濃い灰色のテキスト */
+}
+

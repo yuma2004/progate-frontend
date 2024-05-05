@@ -47,6 +47,11 @@
                 <img src="../img/Rectangle 7.png" alt="サムネイル画像" class="samune-pic" id="samune-image">
             </label>
         </div>
+        </div>
+        <div id="upload" >
+            <button type="submit">
+                アップロード
+            </button>
         <!-- <button class="play-button-samune" for="fileinput"><img src="../img/+.png" alt="再生ボタン"></button> -->
     </div>
    
@@ -111,5 +116,43 @@
     <!-- </footer> -->
     <!-- フッター -->
     <script src="upload.js"></script>
-  </body>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadButton = document.querySelector('#upload button');
+            const titleInput = document.getElementById('title_input');
+            const thumbnailInput = document.getElementById('thumbnail_input');
+        
+            function updateUploadButtonState() {
+                // タイトルが入力されていて、サムネイルが選択されているか確認
+                const isTitleFilled = titleInput.value.trim() !== '';
+                const isThumbnailSelected = thumbnailInput.files.length > 0;
+        
+                // 両方の条件が真であればボタンを有効にし、そうでなければ無効にする
+                if (isTitleFilled && isThumbnailSelected) {
+                    uploadButton.disabled = false;
+                    uploadButton.style.backgroundColor = ''; // デフォルトの背景色を使用
+                    uploadButton.style.color = ''; // デフォルトのテキスト色を使用
+                } else {
+                    uploadButton.disabled = true;
+                    uploadButton.style.backgroundColor = '#ccc'; // 灰色の背景色
+                    uploadButton.style.color = '#666'; // 濃い灰色のテキスト
+                }
+            }
+        
+            // タイトル入力欄の変更を監視
+            titleInput.addEventListener('input', updateUploadButtonState);
+        
+            // サムネイル入力欄の変更を監視
+            thumbnailInput.addEventListener('change', updateUploadButtonState);
+        
+            // 初期状態でボタンを無効にし、スタイルを適用する
+            uploadButton.disabled = true;
+            uploadButton.style.backgroundColor = '#ccc'; // 灰色の背景色
+            uploadButton.style.color = '#666'; // 濃い灰色のテキスト
+        });
+        </script>
+        
+</body> 
 </html>
